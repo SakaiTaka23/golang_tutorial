@@ -31,6 +31,8 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 func login(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("\nmethod:", r.Method) //リクエストを取得するメソッド
 	if r.Method == "GET" {
+
+		// 乱数生成
 		crutime := time.Now().Unix()
 		h := md5.New()
 		io.WriteString(h, strconv.FormatInt(crutime, 10))
