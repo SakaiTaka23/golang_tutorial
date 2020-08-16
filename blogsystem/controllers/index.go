@@ -13,6 +13,6 @@ type IndexController struct {
 
 func (this *IndexController) Get() {
 	this.Data["blogs"] = models.GetAll()
-	this.Layout = "layout.tpl"
-	this.TplName = "index.tpl"
+	this.Layout = "views/layout.tpl"
+	this.TplName = "views/index.tpl"
 }
