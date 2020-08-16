@@ -12,7 +12,8 @@ type IndexController struct {
 }
 
 func (this *IndexController) Get() {
+	beego.BConfig.WebConfig.ViewsPath = "views"
 	this.Data["blogs"] = models.GetAll()
-	this.Layout = "views/layout.tpl"
+	this.Layout = "layout.tpl"
 	this.TplName = "views/index.tpl"
 }
